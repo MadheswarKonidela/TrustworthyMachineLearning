@@ -32,6 +32,7 @@ MODEL_PATH = Path("/path/to/your/model.pt")   # Pre-trained target model
 
 # Update this path to where you want the final CSV to be saved
 OUTPUT_CSV = Path("/path/to/your/output/submission.csv")
+```
 
 
 ## Methodologies Explored
