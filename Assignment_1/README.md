@@ -22,7 +22,6 @@ Before running the code, you must update the file paths within `rmia.py` to poin
 Open `rmia.py` and locate the `# --- Instructor Config ---` section at the top of the file. Update the following paths accordingly:
 
 ```python
-# --- Instructor Config ---
 from pathlib import Path
 
 # Update these paths to where your datasets and target model are stored
