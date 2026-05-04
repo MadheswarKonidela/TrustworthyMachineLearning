@@ -16,6 +16,24 @@ The primary evaluation metric for this assignment is the True Positive Rate (TPR
 *   `rmia.py`: The main Python script implementing the Robust Membership Inference Attack (RMIA).
 *   `*.csv` (Output File): The generated submission file containing the likelihood scores for the private dataset.
 
+## Configuration & File Paths
+Before running the code, you must update the file paths within `rmia.py` to point to your local or cloud environment directories. 
+
+Open `rmia.py` and locate the `# --- Instructor Config ---` section at the top of the file. Update the following paths accordingly:
+
+```python
+# --- Instructor Config ---
+from pathlib import Path
+
+# Update these paths to where your datasets and target model are stored
+PUB_PATH = Path("/path/to/your/pub.pt")       # Public dataset
+PRIV_PATH = Path("/path/to/your/priv.pt")     # Private dataset
+MODEL_PATH = Path("/path/to/your/model.pt")   # Pre-trained target model
+
+# Update this path to where you want the final CSV to be saved
+OUTPUT_CSV = Path("/path/to/your/output/submission.csv")
+
+
 ## Methodologies Explored
 During the development of this project, multiple approaches were tested to find distinguishing signals between members and non-members:
 *   **Gradient-Based:** Attempted to use the magnitude/norm of gradients, assuming non-members would generate higher loss and larger gradients. 
