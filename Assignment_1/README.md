@@ -27,7 +27,7 @@ During the development of this project, multiple approaches were tested to find 
 ## Chosen Implementation: Robust Membership Inference Attack (RMIA)
 
 **How it works:**
-1.  **Data Splitting:** The public dataset is split into a reference training set (a mix of members and non-members) and a population set (non-members unseen by any model).
+1.  **Data Splitting:** The public dataset is split into a reference training set and a population set (non-members unseen by any model).
 2.  **Reference Model:** A new reference model ($R$) is trained on the reference set.
 3.  **Baseline Calculation:** The population data is passed through both the target model ($T$) and the reference model ($R$) to calculate a baseline Log-Likelihood Ratio ( $LLR_{z} = Loss_{R}(z) - Loss_{T}(z)$ ). Since neither model saw this data, they should perform similarly.
 4.  **Evaluation:** Private data points ($x$) are passed through both models to calculate $LLR_{x} = Loss_{R}(x) - Loss_{T}(x)$. If the target model memorized the point, its loss will be significantly lower, causing the LLR to deviate from the baseline. 
