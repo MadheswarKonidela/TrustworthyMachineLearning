@@ -38,13 +38,6 @@ OUTPUT_CSV = Path("/path/to/your/output/submission.csv")
    python rmia.py
 ```
 
-## Methodologies Explored
-During the development of this project, multiple approaches were tested to find distinguishing signals between members and non-members:
-*   **Gradient-Based:** Attempted to use the magnitude/norm of gradients, assuming non-members would generate higher loss and larger gradients. 
-*   **Activations-Based:** Extracted activation energy from deeper layers of the network.
-*   **Perturbation-Based:** Compared the logit scores and losses of original images against perturbed versions, testing if the model was more robust to perturbations on memorized data.
-*   **Likelihood Ratio Attack (LiRA):** Implemented both offline (training 16 shadow models on public data) and online versions to categorize points using likelihood.
-
 
 ## Chosen Implementation: Robust Membership Inference Attack (RMIA)
 
