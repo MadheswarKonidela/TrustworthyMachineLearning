@@ -1,7 +1,7 @@
 # TML_MIA
 # Membership Inference Attack (MIA) 
 
-**Team:** Madheswar Konidela & Pavan Kumar Matcha[cite: 1]  
+**Team:** Madheswar Konidela & Pavan Kumar Matcha
 
 ## Overview
 This repository contains the implementation of a Membership Inference Attack (MIA). The objective of an MIA is to determine whether a specific data sample was used in the training dataset of a given target model. 
