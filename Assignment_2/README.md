@@ -45,14 +45,10 @@ submission_df.to_csv("path/to/your/output/submission.csv", index=False)
 ```
 
 
-## Chosen Implementation: Robust Membership Inference Attack (RMIA)
+## Implementation: Combination of Final Layer weight similarity, Confidence gap, Common Errors and Common bias between target model and suspect model. 
 
-**How it works:**
-1.  **Data Splitting:** The public dataset is split into a reference training set and a population set (non-members unseen by any model).
-2.  **Reference Model:** A new reference model ($R$) is trained on the reference set.
-3.  **Baseline Calculation:** The population data is passed through both the target model ($T$) and the reference model ($R$) to calculate a baseline Log-Likelihood Ratio ( $LLR_{z} = Loss_{R}(z) - Loss_{T}(z)$ ). Since neither model saw this data, they should perform similarly.
-4.  **Evaluation:** Private data points ($x$) are passed through both models to calculate $LLR_{x} = Loss_{R}(x) - Loss_{T}(x)$. If the target model memorized the point, its loss will be significantly lower, causing the LLR to deviate from the baseline. 
+**Metric Used: final_score = max(weight_similarity, bias_agreement, error_agreement * 0.85 + confidence_gap * 0.15)**
 
-## Results & Conclusion
-*   **Local Evaluation Score:** Consistently between `0.19` and `0.21`.
-*   **Leaderboard Score:** `0.058655`.
+
+## Results
+*   **Leaderboard Score:** `0.629630`.
