@@ -45,8 +45,8 @@ submission_df.to_csv("path/to/your/output/submission.csv", index=False)
 ```
 
 
-## Implementation: Combination of Final Layer weight similarity, Confidence gap, Common Errors and Common bias between target model and suspect model. 
-
+## Implementation:
+Combination of Final Layer weight similarity, Confidence gap, Common Errors and Common bias between target model and suspect model. 
 **Metric Used: final_score = max(weight_similarity, bias_agreement, error_agreement * 0.85 + confidence_gap * 0.15)**
 
 
