@@ -13,29 +13,35 @@ The primary evaluation metric for this assignment is the True Positive Rate (TPR
 ($Score = TPR @ 5\% FPR$). The goal is to maximize correct classifications while keeping misclassifications at or below 5%.
 
 ## Repository Contents
-*   `rmia.py`: The main Python script implementing the Robust Membership Inference Attack (RMIA).
-*   `*.csv` (Output File): The generated submission file containing the likelihood scores for the private dataset.
+*   `Assignment_1.py`: The main Python script implementing the Model Ownership Resolution approaches.
+*   `*.csv` (Output File): The generated submission file containing the likelihood scores for each suspect model to be stolen.
 
 ## Configuration & File Paths
-Before running the code, you must update the file paths within `rmia.py` to point to your local or cloud environment directories. 
+Before running the code, you must update the file paths within `Assignment_2.py` to point to your local or cloud environment directories. 
 
-Open `rmia.py` and Update the following paths accordingly:
+Open `Assignment_2.py` and Update the following paths accordingly:
 
 ```python
 from pathlib import Path
 
-# Update these paths to where your datasets and target model are stored
-PUB_PATH = Path("/path/to/your/pub.pt")       # Public dataset
-PRIV_PATH = Path("/path/to/your/priv.pt")     # Private dataset
-MODEL_PATH = Path("/path/to/your/model.pt")   # Pre-trained target model
+# Update these paths to where your dataset, train indices, target model, suspect models folder
+data_root = "path/to/cifar100"
+with open("path/to/train_main_idx.json", "r") as f:
+    train_idx = json.load(f)
+checkpoint_path = "path/to/target_model/weights.safetensors"
+suspect_weights_path = list(Path("path/to/suspect_models").glob('*.safetensors'))
 
 # Update this path to where you want the final CSV to be saved
-OUTPUT_CSV = Path("/path/to/your/output/submission.csv")
+submission_df.to_csv("path/to/your/output/submission.csv", index=False) 
 ```
 **Execute the Script:**
-   Once your paths are configured and dependencies are installed, run the script from your terminal:
+   To install the dependencies:
    ```bash
-   python rmia.py
+   pip install -r requirements.txt
+   ```
+   To run the code (after configuring all paths) 
+   ```bash
+   python Assignment_2.py
 ```
 
 
