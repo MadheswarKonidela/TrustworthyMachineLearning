@@ -13,13 +13,13 @@ The primary evaluation metric for this assignment is the True Positive Rate (TPR
 ($Score = TPR @ 5\% FPR$). The goal is to maximize correct classifications while keeping misclassifications at or below 5%.
 
 ## Repository Contents
-*   `rmia.py`: The main Python script implementing the Robust Membership Inference Attack (RMIA).
+*   `Assignment_1.py`: The main Python script implementing the Robust Membership Inference Attack (RMIA).
 *   `*.csv` (Output File): The generated submission file containing the likelihood scores for the private dataset.
 
 ## Configuration & File Paths
-Before running the code, you must update the file paths within `rmia.py` to point to your local or cloud environment directories. 
+Before running the code, you must update the file paths within `Assignment_1.py` to point to your local or cloud environment directories. 
 
-Open `rmia.py` and Update the following paths accordingly:
+Open `Assignment_1.py` and Update the following paths accordingly:
 
 ```python
 from pathlib import Path
@@ -35,7 +35,7 @@ OUTPUT_CSV = Path("/path/to/your/output/submission.csv")
 **Execute the Script:**
    Once your paths are configured and dependencies are installed, run the script from your terminal:
    ```bash
-   python rmia.py
+   python Assignment_1.py
 ```
 
 
