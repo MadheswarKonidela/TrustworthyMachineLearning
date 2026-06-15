@@ -48,10 +48,14 @@ save_path = os.path.join(save_dir, "model5.pt")
 
 ## Execute the Script
 To install the dependencies:
-```bash pip install torch torchvision numpy```
+```bash 
+pip install torch torchvision numpy
+```
 
 To run the training pipeline (after configuring all paths):
-```bash python train_trades.py```
+```bash 
+python train_trades.py
+```
 
 ## Implementation
 The training architecture relies on a ResNet18 model for the dual-objective learning process.
