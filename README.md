@@ -5,3 +5,6 @@ ________________________________________________________________________________
 ## Model Stealing: Stolen Model Detection  - Assignment 2
 **All the details regarding Assignment 2 can be found in the [Assignment_2](https://github.com/MadheswarKonidela/TrustworthyMachineLearning/tree/main/Assignment_2) folder**
 ______________________________________________________________________________________________________________________________________________
+## Model Stealing: Robustness  - Assignment 3
+**All the details regarding Assignment 3 can be found in the [Assignment_3](https://github.com/MadheswarKonidela/TrustworthyMachineLearning/tree/main/Assignment_3) folder**
+______________________________________________________________________________________________________________________________________________
